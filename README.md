@@ -1,5 +1,4 @@
 # 113學年度第1學期微電腦應用實習
-## abc
 
 :::success
 ### 基本 IO Lab
@@ -31,6 +30,5 @@ pip install opencv-contrib-python
 
 5.程式碼請存放於py-opencv資料夾下
 ![image](https://hackmd.io/_uploads/BkONkuGJkg.png)
-
 
 :::
