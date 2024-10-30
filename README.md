@@ -1,15 +1,11 @@
 # 113學年度第1學期微電腦應用實習
 
-:::success
+
 ### 基本 IO Lab
 #### 參閱範例01-07
-:::
-
-
 
 ---
 
-:::info
 ### 使用opencv拍照
 1.先建立opencv用虛擬環境
 ```
@@ -30,5 +26,3 @@ pip install opencv-contrib-python
 
 5.程式碼請存放於py-opencv資料夾下
 ![image](https://hackmd.io/_uploads/BkONkuGJkg.png)
-
-:::
