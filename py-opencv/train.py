@@ -27,3 +27,4 @@ print('training...')                              # 提示開始訓練
 recog.train(faces,np.array(ids))                  # 開始訓練
 recog.save('face.yml')                            # 訓練完成儲存為 face.yml
 print('ok!')
+print(ids[14])

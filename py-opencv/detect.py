@@ -6,14 +6,14 @@ face_cascade = cv2.CascadeClassifier(cascade_path)        # 啟用人臉追蹤
 
 cap = cv2.VideoCapture(0)                                 # 開啟攝影機
 if not cap.isOpened():
-    print("Cannot open camera")
+    print("Can not open camera")
     exit()
 while True:
     ret, img = cap.read()
     if not ret:
         print("Cannot receive frame")
         break
-    img = cv2.resize(img,(540,300))              # 縮小尺寸，加快辨識效率
+    img = cv2.resize(img,(640,480))              # 縮小尺寸，加快辨識效率
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)  # 轉換成黑白
     faces = face_cascade.detectMultiScale(gray)  # 追蹤人臉 ( 目的在於標記出外框 )
 
@@ -28,7 +28,7 @@ while True:
     for(x,y,w,h) in faces:
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)            # 標記人臉外框
         idnum,confidence = recognizer.predict(gray[y:y+h,x:x+w])  # 取出 id 號碼以及信心指數 confidence
-        if confidence < 60:
+        if confidence < 10:
             text = name[str(idnum)]                               # 如果信心指數小於 60，取得對應的名字
         else:
             text = '???'                                          # 不然名字就是 ???
