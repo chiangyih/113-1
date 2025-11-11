@@ -10,7 +10,7 @@ cv2.namedWindow('YOLOv8', cv2.WINDOW_NORMAL) #cv2.WINDOW_NORMAL可以讓視窗�
 # target=1
 #target='city.mp4'
 target='https://trafficvideo.tainan.gov.tw/e2e14cfa'
-#target='rtsp://admin:hk888888@172.16.103.192:554'
+
 model = YOLO('yolov8m.pt')  # n,s,m,l,x 五種大小
 
 names=model.names #辨識類別, 80種 
